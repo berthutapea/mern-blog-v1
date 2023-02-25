@@ -13,7 +13,7 @@ router.use('/price', (req, res, next) => {
     next();
 })
 
-router.get('/customers', (req, res, next) => {
+router.delete('/customers', (req, res, next) => {
     res.json({ title: "Costomers" });
     next();
 })
