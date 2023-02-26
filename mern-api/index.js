@@ -13,6 +13,6 @@ app.use((req, res, next) => {
     next();
 })
 
-// app.use('/v1/customer', productRoutes);
+app.use('/v1/customer', productRoutes);
 
 app.listen(4000)
