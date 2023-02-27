@@ -16,5 +16,6 @@ app.use((req, res, next) => {
 
 app.use('/v1/customer', productRoutes);
 app.use('/v1/auth', authRoutes);
+// app.use('/v1/blog', authRoutes);
 
 app.listen(4000)

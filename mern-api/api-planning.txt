@@ -57,6 +57,39 @@ req:
 GROUP: BLOG
 
 [1] - Create Blog Post
+[POST] : {root.api}/{version}/blog/post
+
+req:
+{
+    "title" : "Title Blog",
+    "image" : "imagefile.png",
+    "body" : "Lorem Ipsum is simply dummy text of the printing"
+}
+
+res:
+{
+    "message": "Create Blog Post Success",
+    "data": {
+        "post_id": 1,
+        "title" : "Title Blog",
+        "image" : "imagefile.png",
+        "body" : "Lorem Ipsum is simply dummy text of the printing",
+        "created_at : "27/02/2023"
+        "author: {
+            "uid": 1,
+            "name" : "Testing"
+        }
+    } 
+}
+
+err-response
+201 -> Blog Post Berhasil Dibuat
+400 -> Input yang anda masukkan tidak valid
+
+=============================================================================================
+
+GROUP: BLOG
+
 [2] - Get Blog Post
 [3] - Update Blog Post
 [4] - Delete Blog Post
