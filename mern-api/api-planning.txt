@@ -22,7 +22,7 @@ Standar Status Response:
 GROUP : Authentication
 
 [1] - Register
-[POST] : {root.api}/{version}/auth/login
+[POST] : {root.api}/{version}/auth/register
 
 req:
 {
