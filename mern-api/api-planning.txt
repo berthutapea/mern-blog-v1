@@ -42,14 +42,16 @@ res:
 }
 
 err-response
+201 -> Register Berhasil
 400 -> Input yang anda masukkan tidak valid
 
 [2] - Login
-{root.api}/{version}/auth/login
+[POST] : {root.api}/{version}/auth/login
 
 req:
 {
-    ""
+    "email : "test@email.com.
+    "password: "12345"
 }
 
 GROUP: BLOG
