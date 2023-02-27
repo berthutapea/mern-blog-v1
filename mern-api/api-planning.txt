@@ -1,0 +1,52 @@
+Standar API
+
+{root.api}/{version}{grouping}/{endpoint}
+SAMPLE :
+http://msn-api.msnproduction.com/v1/auth/login
+
+Standar Status Response:
+
+200 - OK                             --> Call API Success
+201 - CREATED                        --> Post Success
+400 - BAD REQUEST                    --> Error on Client Side (Bisa Input Yang Salah dll).
+401 - UNAUTHORIZED                   --> User not Authorized to the request
+403 - FORBIDDEN                      --> User not allowed to access.
+404 - NOT FOUND                      --> Request Endpoint Not Found.
+500 - INTERNAL SERVER ERROR          --> Error on Server Side
+502 - BAD GATEWAY                    --> Invalid Response From Antoher Request
+
+GROUP : Authentication
+
+req
+[1] - Register
+{root.api}/{version}/auth/login
+
+req:
+{
+    "name" : "Testing",
+    "email : "test@email.com.
+    "password: "12345"
+}
+
+res:
+{
+    "message" : "Register Success",
+    "data" " {
+        "name" : "Testing",
+        "email : "test@email.com.
+        "password: "12345"
+    }
+}
+
+err-response
+400 -> Input yang anda masukkan tidak valid
+
+[2] - Login
+{root.api}/{version}/auth/login
+
+GROUP: BLOG
+
+[1] - Create Blog Post
+[2] - Get Blog Post
+[3] - Update Blog Post
+[4] - Delete Blog Post
