@@ -4,6 +4,8 @@ Standar API
 SAMPLE :
 http://msn-api.msnproduction.com/v1/auth/login
 
+=============================================================================================
+
 Standar Status Response:
 
 200 - OK                             --> Call API Success
@@ -15,11 +17,12 @@ Standar Status Response:
 500 - INTERNAL SERVER ERROR          --> Error on Server Side
 502 - BAD GATEWAY                    --> Invalid Response From Antoher Request
 
+=============================================================================================
+
 GROUP : Authentication
 
-req
 [1] - Register
-{root.api}/{version}/auth/login
+[POST] : {root.api}/{version}/auth/login
 
 req:
 {
@@ -43,6 +46,11 @@ err-response
 
 [2] - Login
 {root.api}/{version}/auth/login
+
+req:
+{
+    ""
+}
 
 GROUP: BLOG
 
