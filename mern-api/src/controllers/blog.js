@@ -1,7 +1,7 @@
 exports.createBlogPost = (req, res, next) => {
     const title = req.body.title;
     // const image= req.body.image;
-    const body = req.body.body;
+    // const body = req.body.body;
 
     const result = {
         message: 'Create Blog Post Success',
