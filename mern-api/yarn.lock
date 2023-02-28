@@ -188,6 +188,14 @@ etag@~1.8.1:
   resolved "https://registry.npmmirror.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
 
+express-validator@^6.15.0:
+  version "6.15.0"
+  resolved "https://registry.npmmirror.com/express-validator/-/express-validator-6.15.0.tgz#5e4601428960b0d66f5f4ae09cb32ed2077374a4"
+  integrity sha512-r05VYoBL3i2pswuehoFSy+uM8NBuVaY7avp5qrYjQBDzagx2Z5A77FZqPT8/gNLF3HopWkIzaTFaC4JysWXLqg==
+  dependencies:
+    lodash "^4.17.21"
+    validator "^13.9.0"
+
 express@^4.18.2:
   version "4.18.2"
   resolved "https://registry.npmmirror.com/express/-/express-4.18.2.tgz#3fabe08296e930c796c19e3c516979386ba9fd59"
@@ -354,6 +362,11 @@ is-number@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmmirror.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.npmmirror.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -639,6 +652,11 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==
+
+validator@^13.9.0:
+  version "13.9.0"
+  resolved "https://registry.npmmirror.com/validator/-/validator-13.9.0.tgz#33e7b85b604f3bbce9bb1a05d5c3e22e1c2ff855"
+  integrity sha512-B+dGG8U3fdtM0/aNK4/X8CXq/EcxU2WPrPEkJGslb47qyHsxmbggTWK0yEA4qnYVNF+nxNlN88o14hIcPmSIEA==
 
 vary@~1.1.2:
   version "1.1.2"
