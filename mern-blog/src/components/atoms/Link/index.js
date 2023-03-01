@@ -1,10 +1,10 @@
-// import React from 'react'
-// import './link.scss';
+import React from 'react'
+import './link.scss';
 
-// const Link = ({ title, onClick }) => {
-//     return (
-//         <p className="link" onClick={onClick}>{title}</p>
-//     )
-// }
+const Link = ({ title, onClick }) => {
+    return (
+        <p className="link" onClick={onClick}>{title}</p>
+    )
+}
 
-// export default Link
+export default Link
