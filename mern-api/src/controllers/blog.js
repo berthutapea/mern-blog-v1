@@ -40,3 +40,16 @@ exports.createBlogPost = (req, res, next) => {
         });
 
 }
+
+exports.getAllBlogPost = (req, res, next) => {
+    BlogPost.find()
+        .then(result => {
+            res.status(200).json({
+                message: 'Data Blog Post Berhasil Di Panggil',
+                data: result
+            })
+        })
+        .catch(err => {
+            next(err);
+        })
+}
