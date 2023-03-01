@@ -1,14 +1,14 @@
-import React from 'react';
-import { LoginBg } from '../../../assets';
-import './upload.scss';
+// import React from 'react';
+// import { LoginBg } from '../../../assets';
+// import './upload.scss';
 
-const Upload = () => {
-    return (
-        <div className="upload">
-            <img className="preview" src={LoginBg} alt="preview" />
-            <input type="file" />
-        </div>
-    )
-}
+// const Upload = () => {
+//     return (
+//         <div className="upload">
+//             <img className="preview" src={LoginBg} alt="preview" />
+//             <input type="file" />
+//         </div>
+//     )
+// }
 
-export default Upload;
+// export default Upload;
