@@ -2,7 +2,8 @@ const { validationResult } = require('express-validator');
 const path = require('path');
 const fs = require('fs');
 const BlogPost = require('../models/blog');
-const { post } = require('../routes/auth');
+const { count } = require('console');
+// const { post } = require('../routes/auth');
 
 exports.createBlogPost = (req, res, next) => {
     const errors = validationResult(req);
@@ -45,11 +46,25 @@ exports.createBlogPost = (req, res, next) => {
 }
 
 exports.getAllBlogPost = (req, res, next) => {
+    const currentPage = req.query.page || 1;
+    const perPage = req.query.perPage || 5;
+    let totalItems;
+
     BlogPost.find()
+        .countDocuments()
+        .then(count => {
+            totalItems = count;
+            return BlogPost.find()
+                .skip((parseInt(currentPage) - 1) * parseInt(perPage))
+                .limit(parseInt(perPage));
+        })
         .then(result => {
             res.status(200).json({
                 message: 'Data Blog Post Berhasil Di Panggil',
                 data: result,
+                total_data: totalItems,
+                per_page: parseInt(perPage),
+                current_page: parseInt(currentPage),
             })
         })
         .catch(err => {
