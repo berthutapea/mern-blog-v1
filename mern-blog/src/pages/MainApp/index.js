@@ -16,7 +16,7 @@ const MainApp = () => {
                         <Route path="/create-blog">
                             <CreateBlog />
                         </Route>
-                        <Route path="/detail-blog">
+                        <Route path="/detail-blog/:id">
                             <DetailBlog />
                         </Route>
                         <Route path="/">
