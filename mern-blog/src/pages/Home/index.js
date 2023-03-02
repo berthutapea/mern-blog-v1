@@ -1,19 +1,19 @@
-// import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BlogItem, Button, Gap } from '../../components';
 import './home.scss';
 import { useHistory } from 'react-router-dom';
-// import { Axios } from 'axios';
+import Axios from 'axios';
 
 const Home = () => {
-  // useEffect(() => {
-  //   Axios.get('http://localhost:4000/v1/blog/posts')
-  //     .then(result => {
-  //       console.log('data API', result);
-  //     })
-  //     .catch(err => {
-  //       console.log('error: ', err);
-  //     })
-  // }, [])
+  useEffect(() => {
+    Axios.get('http://localhost:4000/v1/blog/posts')
+      .then(result => {
+        console.log('data Api', result.data);
+      })
+      .catch(err => {
+        console.log('error: ', err);
+      })
+  }, [])
   const history = useHistory();
   return (
     <div className="home-page-wrapper">
