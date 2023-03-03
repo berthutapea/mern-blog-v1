@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { useHistory, withRouter } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Button, Gap, Input, TextArea, Upload, Link } from '../../components';
 import { postToApi, setForm, setImgPreview, updateToApi } from '../../config/redux/action';
 import './createBlog.scss';
 import Axios from 'axios';
 
-const CreateBlog = (props) => {
+const CreateBlog = () => {
     const { form, imgPreview } = useSelector(state => state.createBlogReducer);
     const { title, body } = form;
     const [isUpdate, setIsUpdate] = useState(false);
     const dispatch = useDispatch();
-    const history = useHistory();
+    const navigate = useNavigate();
+    const { id } = useParams();
 
     useEffect(() => {
-        console.log('params: ', props)
-        const id = props.match.params.id;
         if (id) {
             setIsUpdate(true);
             Axios.get(`http://localhost:4000/v1/blog/post/${id}`)
@@ -30,10 +29,9 @@ const CreateBlog = (props) => {
                     console.log('err: ', err);
                 })
         }
-    }, [dispatch, props])
+    }, [dispatch, id])
 
     const onSubmit = () => {
-        const id = props.match.params.id;
         if (isUpdate) {
             console.log('update data');
             updateToApi(form, id)
@@ -48,9 +46,10 @@ const CreateBlog = (props) => {
         dispatch(setForm('image', file));
         dispatch(setImgPreview(URL.createObjectURL(file)))
     }
+
     return (
         <div className="blog-post">
-            <Link title="kembali" onClick={() => history.push('/')} />
+            <Link title="kembali" onClick={() => navigate('/')} />
             <p className="title">{isUpdate ? 'Update' : 'Create New'} New Blog Post</p>
             <Input label="Post Title" value={title} onChange={(e) => dispatch(setForm('title', e.target.value))} />
             <Upload onChange={(e) => onImageUpload(e)} img={imgPreview} />
@@ -63,4 +62,4 @@ const CreateBlog = (props) => {
     )
 }
 
-export default withRouter(CreateBlog);
+export default CreateBlog;

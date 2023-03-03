@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import CreateBlog from '../CreateBlog';
 import DetailBlog from '../DetailBlog';
 import Home from '../Home';
@@ -11,23 +11,15 @@ const MainApp = () => {
         <div className="main-app-wrapper">
             <Header />
             <div className="content-wrapper">
-                <Router>
-                    <Switch>
-                        <Route path="/create-blog/:id?">
-                            <CreateBlog />
-                        </Route>
-                        <Route path="/detail-blog/:id">
-                            <DetailBlog />
-                        </Route>
-                        <Route path="/">
-                            <Home />
-                        </Route>
-                    </Switch>
-                </Router>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/create-blog/:id?" element={<CreateBlog />} />
+                    <Route path="/detail-blog/:id" element={<DetailBlog />} />
+                </Routes>
             </div>
             <Footer />
         </div>
-    )
-}
+    );
+};
 
 export default MainApp;

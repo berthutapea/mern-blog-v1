@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import './detailBlog.scss';
-import { useHistory, withRouter } from 'react-router-dom';
 import { Link, Gap } from '../../components';
 import Axios from 'axios';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 
-const DetailBlog = (props) => {
+const DetailBlog = () => {
+    const { id } = useParams();
+    const location = useLocation();
+    const navigate = useNavigate();
     const [data, setData] = useState({});
+
     useEffect(() => {
-        const id = props.match.params.id;
         Axios.get(`http://localhost:4000/v1/blog/post/${id}`)
             .then(res => {
                 setData(res.data.data)
@@ -15,8 +18,8 @@ const DetailBlog = (props) => {
             .catch(err => {
                 console.log('err: ', err);
             })
-    }, [props])
-    const history = useHistory();
+    }, [id])
+
     if (data.author) {
         return (
             <div className="detail-blog-wrapper">
@@ -25,11 +28,11 @@ const DetailBlog = (props) => {
                 <p className="blog-author">{data.author.name} - {data.createdAt}</p>
                 <p className="blog-body">{data.body}</p>
                 <Gap height={20} />
-                <Link title="Kembali Ke Home" onClick={() => history.push('/')} />
+                <Link title="Kembali Ke Home" onClick={() => navigate('/')} />
             </div>
         )
     }
-    <p>Loading data...</p>
+    return <p>Loading data...</p>
 }
 
-export default withRouter(DetailBlog);
+export default DetailBlog;

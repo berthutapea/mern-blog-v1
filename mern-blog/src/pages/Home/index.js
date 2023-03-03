@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BlogItem, Button, Gap } from '../../components';
 import './home.scss';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDataBlog } from '../../config/redux/action';
 import { confirmAlert } from 'react-confirm-alert';
@@ -17,7 +17,7 @@ const Home = () => {
     dispatch(setDataBlog(counter))
   }, [counter, dispatch])
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const previous = () => {
     setCounter(counter <= 1 ? 1 : counter - 1)
@@ -56,7 +56,7 @@ const Home = () => {
   return (
     <div className="home-page-wrapper">
       <div className="create-wrapper">
-        <Button title="create blog" onClick={() => history.push('/create-blog')} />
+        <Button title="create blog" onClick={() => navigate('/create-blog')} />
       </div>
       <Gap height={20} />
       <div className="content-wrapper">
