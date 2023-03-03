@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './detailBlog.scss';
 import { Link, Gap } from '../../components';
 import Axios from 'axios';
-import { useNavigate, useParams} from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const DetailBlog = () => {
     const { id } = useParams();

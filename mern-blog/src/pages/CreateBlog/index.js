@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Button, Gap, Input, TextArea, Upload, Link } from '../../components';
 import { postToApi, setForm, setImgPreview, updateToApi } from '../../config/redux/action';
@@ -7,14 +7,15 @@ import './createBlog.scss';
 import Axios from 'axios';
 
 const CreateBlog = () => {
+    const { id } = useParams();
     const { form, imgPreview } = useSelector(state => state.createBlogReducer);
     const { title, body } = form;
     const [isUpdate, setIsUpdate] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { id } = useParams();
 
     useEffect(() => {
+        console.log('params: ', id);
         if (id) {
             setIsUpdate(true);
             Axios.get(`http://localhost:4000/v1/blog/post/${id}`)
@@ -34,11 +35,12 @@ const CreateBlog = () => {
     const onSubmit = () => {
         if (isUpdate) {
             console.log('update data');
-            updateToApi(form, id)
+            updateToApi(form, id);
         } else {
             console.log('create data');
-            postToApi(form)
+            postToApi(form);
         }
+        navigate('/');
     }
 
     const onImageUpload = (e) => {
@@ -46,7 +48,6 @@ const CreateBlog = () => {
         dispatch(setForm('image', file));
         dispatch(setImgPreview(URL.createObjectURL(file)))
     }
-
     return (
         <div className="blog-post">
             <Link title="kembali" onClick={() => navigate('/')} />
