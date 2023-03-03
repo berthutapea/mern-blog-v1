@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory, withRouter } from 'react-router-dom';
 import { Button, Gap, Input, TextArea, Upload, Link } from '../../components';
-import { postToApi, setForm, setImgPreview } from '../../config/redux/action';
+import { postToApi, setForm, setImgPreview, updateToApi } from '../../config/redux/action';
 import './createBlog.scss';
 import Axios from 'axios';
 
@@ -22,15 +22,25 @@ const CreateBlog = (props) => {
                 .then(res => {
                     const data = res.data.data;
                     console.log('res: ', data);
+                    dispatch(setForm('title', data.title));
+                    dispatch(setForm('body', data.body));
+                    dispatch(setImgPreview(`http://localhost:4000/${data.image}`));
                 })
                 .catch(err => {
                     console.log('err: ', err);
                 })
         }
-    }, [props])
+    }, [dispatch, props])
 
     const onSubmit = () => {
-        postToApi(form)
+        const id = props.match.params.id;
+        if (isUpdate) {
+            console.log('update data');
+            updateToApi(form, id)
+        } else {
+            console.log('create data');
+            postToApi(form)
+        }
     }
 
     const onImageUpload = (e) => {
