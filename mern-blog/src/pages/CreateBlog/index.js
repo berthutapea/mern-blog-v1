@@ -31,15 +31,15 @@ const CreateBlog = () => {
         }
     }, [dispatch, id])
 
-    const onSubmit = () => {
-        if (isUpdate) {
-            console.log('update data');
-            updateToApi(form, id)
-        } else {
-            console.log('create data');
-            postToApi(form)
-        }
-    }
+    // const onSubmit = () => {
+    //     if (isUpdate) {
+    //         console.log('update data');
+    //         updateToApi(form, id)
+    //     } else {
+    //         console.log('create data');
+    //         postToApi(form)
+    //     }
+    // }
 
     const onImageUpload = (e) => {
         const file = e.target.files[0];
