@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copyright">
-                <p>Copyright</p>
+                <p>© 2023 Gilbert Hutapea. All Rights Reserved</p>
             </div>
         </div>
     )
