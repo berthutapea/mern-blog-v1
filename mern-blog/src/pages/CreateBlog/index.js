@@ -42,11 +42,11 @@ const CreateBlog = () => {
         }
     }
 
-    const onImageUpload = (e) => {
-        const file = e.target.files[0];
-        dispatch(setForm('image', file));
-        dispatch(setImgPreview(URL.createObjectURL(file)))
-    }
+    // const onImageUpload = (e) => {
+    //     const file = e.target.files[0];
+    //     dispatch(setForm('image', file));
+    //     dispatch(setImgPreview(URL.createObjectURL(file)))
+    // }
     return (
         <div className="blog-post">
             <Link title="kembali" onClick={() => navigate('/')} />
