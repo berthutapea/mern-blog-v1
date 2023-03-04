@@ -47,19 +47,19 @@ const CreateBlog = () => {
         dispatch(setForm('image', file));
         dispatch(setImgPreview(URL.createObjectURL(file)))
     }
-    return (
-        <div className="blog-post">
-            <Link title="kembali" onClick={() => navigate('/')} />
-            <p className="title">{isUpdate ? 'Update' : 'Create New'} New Blog Post</p>
-            <Input label="Post Title" value={title} onChange={(e) => dispatch(setForm('title', e.target.value))} />
-            <Upload onChange={(e) => onImageUpload(e)} img={imgPreview} />
-            <TextArea value={body} onChange={(e) => dispatch(setForm('body', e.target.value))} />
-            <Gap height={20} />
-            <div className="button-action">
-                <Button title={isUpdate ? 'Update' : 'Simpan'} onClick={onSubmit} />
-            </div>
-        </div>
-    )
+    // return (
+    //     <div className="blog-post">
+    //         <Link title="kembali" onClick={() => navigate('/')} />
+    //         <p className="title">{isUpdate ? 'Update' : 'Create New'} New Blog Post</p>
+    //         <Input label="Post Title" value={title} onChange={(e) => dispatch(setForm('title', e.target.value))} />
+    //         <Upload onChange={(e) => onImageUpload(e)} img={imgPreview} />
+    //         <TextArea value={body} onChange={(e) => dispatch(setForm('body', e.target.value))} />
+    //         <Gap height={20} />
+    //         <div className="button-action">
+    //             <Button title={isUpdate ? 'Update' : 'Simpan'} onClick={onSubmit} />
+    //         </div>
+    //     </div>
+    // )
 }
 
 export default CreateBlog;
