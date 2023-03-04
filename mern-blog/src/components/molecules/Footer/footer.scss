@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #67b35c;
-    padding: 20px 40px;
+    background-color: #35322d;;
+    padding: 0px 50px;
 
     .logo {
-        width: 70px;
-        height: 70px;
+        width: 150px;
+        height: 150px;
         object-fit: contain;
     }
 
@@ -15,7 +15,6 @@
         display: flex;
 
         .icon-wrapper {
-            background-color: white;
             padding: 10px;
             border-radius: 40px;
             margin: 0px 10px;
@@ -31,11 +30,11 @@
 }
 
 .copyright {
-    background-color: #569e4b;
+    background-color: #35322d;
     padding: 10px 0px;
 
     p {
-        font-size: 14px;
+        font-size: 20px;
         color: white;
         text-align: center;
         margin: 0px;

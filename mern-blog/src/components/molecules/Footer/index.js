@@ -1,5 +1,5 @@
 import React from 'react';
-import { ICDiscord, ICFacebook, ICGithub, ICInstagram, ICTelegram, ICTwitter, LogoKabayan } from '../../../assets';
+import { ICDiscord, ICFacebook, ICGithub, ICInstagram, ICTelegram, ICTwitter, LogoMsn } from '../../../assets';
 import './footer.scss';
 
 const Icon = ({ img }) => {
@@ -15,7 +15,7 @@ const Footer = () => {
         <div>
             <div className="footer">
                 <div>
-                    <img className="logo" src={LogoKabayan} alt="logo" />
+                    <img className="logo" src={LogoMsn} alt="logo" />
                 </div>
                 <div className="social-wrapper">
                     <Icon img={ICFacebook} />
