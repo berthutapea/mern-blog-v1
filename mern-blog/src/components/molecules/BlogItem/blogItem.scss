@@ -29,14 +29,22 @@
                     cursor: pointer;
                     margin: 0px;
                     margin-right: 14px;
+
+                    &:hover {
+                        color: #0011ff;
+                    }
                 }
 
                 .delete {
                     font-weight: bold;
                     margin: 0px;
                     margin-left: 14px;
-                    color: #e91e63;
+                    color: #c4295d;
                     cursor: pointer;
+
+                    &:hover {
+                        color: #ff0000;
+                    }
                 }
             }
         }

@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Gap } from '../../atoms';
 import './blogItem.scss';
 import { useNavigate } from 'react-router-dom';
+import { FiDelete, FiEdit } from 'react-icons/fi';
+
 
 const BlogItem = (props) => {
     const navigate = useNavigate();
@@ -13,7 +15,7 @@ const BlogItem = (props) => {
                 <div className="title-wrapper">
                     <p className="title">{title}</p>
                     <div className="edit-wrapper">
-                        <p className="edit" onClick={() => navigate(`/create-blog/${_id}`)}>Edit</p> | <p className="delete" onClick={() => onDelete(_id)}>Delete</p>
+                        <p className="edit" onClick={() => navigate(`/create-blog/${_id}`)}><FiEdit /></p><p className="delete" onClick={() => onDelete(_id)}><FiDelete /></p>
                     </div>
                 </div>
                 <p className="author">{name} - {date}</p>
