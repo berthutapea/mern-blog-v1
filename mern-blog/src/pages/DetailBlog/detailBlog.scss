@@ -1,26 +1,31 @@
 .detail-blog-wrapper {
+    text-align: center;
 
     .img-cover {
-        width: 100%;
-        height: 300px;
+        height: auto;
+        max-width: 40%;
         object-fit: cover;
+        margin: 0;
     }
 
     .blog-title {
+        text-align: left;
         margin: 0px;
-        font-size: 30px;
+        font-size: 25px;
         font-weight: bold;
         color: #2d2d2d;
         margin-top: 20px;
     }
 
     .blog-author {
+        text-align: left;
         margin: 0px;
-        font-size: 16px;
+        font-size: 15px;
         color: grey;
     }
 
     .blog-body {
+        text-align: left;
         font-size: 18px;
         line-height: 36px;
     }

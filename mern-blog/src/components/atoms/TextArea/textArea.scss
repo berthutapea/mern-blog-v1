@@ -1,8 +1,19 @@
-.text-area {
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 8px;
-    padding: 16px;
-    outline: none;
-    min-height: 200px;
+.text-area-wrapper {
+
+    .label {
+        font-size: 16px;
+        color: #2d2d2d;
+        margin: 0px;
+        margin-bottom: 6px;
+    }
+
+    .text-area {
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding: 16px;
+        outline: none;
+        min-height: 200px;
+        resize: vertical !important;
+    }
 }

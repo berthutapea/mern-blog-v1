@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom';
 import { Button, Gap, Input, TextArea, Upload, Link } from '../../components';
-import { postToApi, setForm, setImgPreview, updateToApi, resetForm } from '../../config/redux/action';
+import { postToApi, setForm, setImgPreview, updateToApi } from '../../config/redux/action';
 import './createBlog.scss';
 import Axios from 'axios';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const CreateBlog = () => {
     const { id } = useParams();
@@ -49,15 +50,16 @@ const CreateBlog = () => {
     }
     return (
         <div className="blog-post">
-            <Link title="kembali" onClick={() => navigate('/')} />
+            <Link title="Back" onClick={() => navigate('/')} />
             <p className="title">{isUpdate ? 'Update' : 'Create New'} New Blog Post</p>
-            <Input label="Post Title" value={title} onChange={(e) => dispatch(setForm('title', e.target.value))} />
+            <Input label="Title" value={title} onChange={(e) => dispatch(setForm('title', e.target.value))} />
             <Upload onChange={(e) => onImageUpload(e)} img={imgPreview} />
-            <TextArea value={body} onChange={(e) => dispatch(setForm('body', e.target.value))} />
+            <TextArea label="Description" value={body} onChange={(e) => dispatch(setForm('body', e.target.value))} />
             <Gap height={20} />
             <div className="button-action">
-                <Button title={isUpdate ? 'Update' : 'Simpan'} onClick={onSubmit} />
+                <Button title={isUpdate ? 'Update' : 'Save'} onClick={onSubmit} />
             </div>
+            <Gap height={20} />
         </div>
     )
 }

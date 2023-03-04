@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Gap } from '../../atoms';
 import './blogItem.scss';
 import { useNavigate } from 'react-router-dom';
-import { FiDelete, FiEdit } from 'react-icons/fi';
+import { FaTrash, FaEdit } from 'react-icons/fa';
 
 
 const BlogItem = (props) => {
@@ -15,7 +15,7 @@ const BlogItem = (props) => {
                 <div className="title-wrapper">
                     <p className="title">{title}</p>
                     <div className="edit-wrapper">
-                        <p className="edit" onClick={() => navigate(`/create-blog/${_id}`)}><FiEdit /></p><p className="delete" onClick={() => onDelete(_id)}><FiDelete /></p>
+                        <p className="edit" onClick={() => navigate(`/create-blog/${_id}`)}><FaEdit /></p><p className="delete" onClick={() => onDelete(_id)}><FaTrash /></p>
                     </div>
                 </div>
                 <p className="author">{name} - {date}</p>
