@@ -66,9 +66,6 @@ const AdminBlog = () => {
                         key={blog._id}
                         image={`http://localhost:4000/${blog.image}`}
                         title={blog.title}
-                        // body={blog.body}
-                        // name={blog.author.name}
-                        // date={blog.createdAt}
                         _id={blog._id}
                         onDelete={confirmDelete}
                     />
