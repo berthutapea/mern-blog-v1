@@ -7,16 +7,12 @@ import { FaTrash, FaEdit } from 'react-icons/fa';
 
 const BlogAdmin = (props) => {
     const navigate = useNavigate();
-    const { image, title, name, date, body, _id, onDelete } = props;
+    const { image, title, _id, onDelete } = props;
     return (
         
-        <div className="Container">
             <div className="panel panel-default">
-                <div className="panel-heading">
-                    <p></p>
-                </div>
                 <div className="panel-body">
-                    <table className="table-latitude">
+                    <table className="table-admin">
                     <thead>
                         <th>Title</th>
                         <th>Image</th>
@@ -31,18 +27,8 @@ const BlogAdmin = (props) => {
                     </tbody>
                     </table>
                 </div>
-            {/* <img className="image-thumb" src={image} alt="post" /> */}
-                {/* <div className="title-wrapper">
-                    <p className="title">{title}</p> */}
-                    {/* <div className="edit-wrapper">
-                        <p className="edit" onClick={() => navigate(`/create-blog/${_id}`)}><FaEdit /></p><p className="delete" onClick={() => onDelete(_id)}><FaTrash /></p>
-                    </div> */}
-                {/* </div> */}
-                {/* <p className="author">{name} - {date}</p> */}
-                {/* <p className="body">{body}</p> */}
+                <Gap height={20} />
             </div>
-            <Gap height={20} />
-        </div>
     )
 }
 

@@ -7,20 +7,14 @@ body {
     background-color: $background;
 }
 
-.table-latitude {
-    width: 100%;
-
-    thead {
-        border-top: 2px solid $lfs-yellow;
-        border-bottom: 2px solid $lfs-yellow;
-
+.table-admin {
         th {
             text-align: center;
-            padding: 10px;
+            padding: 8px;
             color: #000000;
             border: 1px solid #000000;
         }
-    }
+    
 
     tbody {
         tr {
@@ -41,7 +35,6 @@ body {
                 font-size: 15px;
                 width: 1000px;
                 text-align: left;
-                // font-weight: bold;
                 margin: 0px;
             }
 

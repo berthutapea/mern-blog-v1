@@ -1,27 +1,17 @@
 .admin-page-wrapper {
     padding-top: 40px;
 
-    // .admin-content-wrapper {
-    //     display: flex;
-    //     align-items: stretch;
-    //     justify-content: flex-start;
-    //     gap: 10px;
-    //     gap: 10px 20px;
-    //     row-gap: 10px;
-    //     column-gap: 20px
-    // }
-
     .admin-pagination {
-        width: 400px;
+        width: 300px;
         height: 40px;
         display: flex;
         margin: auto;
     }
 
     .admin-text-page {
-        font-size: 15px;
-        width: 1000px;
-        text-align: left;
+        font-size: 30px;
+        width: 250px;
+        text-align: center;
         font-weight: bold;
         margin: 0px;
     }
