@@ -14,7 +14,6 @@ const BlogItem = (props) => {
                 <div className="title-wrapper">
                     <p className="title">{title}</p>
                     <div className="edit-wrapper">
-                        {/* <p className="edit" onClick={() => navigate(`/create-blog/${_id}`)}><FaEdit /></p><p className="delete" onClick={() => onDelete(_id)}><FaTrash /></p> */}
                     </div>
                 </div>
                 <p className="author">{name} - {date}</p>
