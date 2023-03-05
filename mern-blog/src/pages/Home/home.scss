@@ -5,17 +5,22 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        flex-basis: 23%;
+        // background-color: #f4f4f4;
+        padding: 16px;
+        margin-right: 16px;
     }
 
     .pagination {
         width: 400px;
+        height: 40px;
         display: flex;
         margin: auto;
     }
 
     .text-page {
-        font-size: 38px;
-        width: 380px;
+        font-size: 30px;
+        width: 300px;
         text-align: center;
         font-weight: bold;
         margin: 0px;

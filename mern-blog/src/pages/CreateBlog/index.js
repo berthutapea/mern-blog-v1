@@ -53,7 +53,7 @@ const CreateBlog = () => {
             <Link title="Back" onClick={() => navigate('/')} />
             <p className="title">{isUpdate ? 'Update' : 'Create New'} New Blog Post</p>
             <Input label="Title" value={title} onChange={(e) => dispatch(setForm('title', e.target.value))} />
-            <Upload onChange={(e) => onImageUpload(e)} img={imgPreview} />
+            <Upload label="Image" onChange={(e) => onImageUpload(e)} img={imgPreview} />
             <TextArea label="Description" value={body} onChange={(e) => dispatch(setForm('body', e.target.value))} />
             <Gap height={20} />
             <div className="button-action">

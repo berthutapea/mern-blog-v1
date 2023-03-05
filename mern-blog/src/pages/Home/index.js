@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { BlogItem, Button, Gap } from '../../components';
 import './home.scss';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDataBlog } from '../../config/redux/action';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import Axios from 'axios';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const Home = () => {
   const [counter, setCounter] = useState(1);
@@ -16,8 +16,6 @@ const Home = () => {
   useEffect(() => {
     dispatch(setDataBlog(counter))
   }, [counter, dispatch])
-
-  const navigate = useNavigate();
 
   const previous = () => {
     setCounter(counter <= 1 ? 1 : counter - 1)

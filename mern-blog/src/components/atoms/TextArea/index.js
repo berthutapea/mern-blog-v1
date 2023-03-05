@@ -12,8 +12,3 @@ const TextArea = ({label, ...rest }) => {
 }
 
 export default TextArea;
-
-{/* <div className="input-wrapper">
-    <p className="label">{label}</p>
-    <input className="input" {...rest} />
-</div> */}

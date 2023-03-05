@@ -21,7 +21,7 @@ const BlogItem = (props) => {
                 <p className="author">{name} - {date}</p>
                 <p className="body">{body}</p>
                 <Gap height={20} />
-                <Button title="View Detail" onClick={() => navigate(`/detail-blog/${_id}`)} />
+                <Button title="Read More" onClick={() => navigate(`/detail-blog/${_id}`)} />
             </div>
         </div>
     )
