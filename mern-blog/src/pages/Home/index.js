@@ -6,7 +6,6 @@ import { setDataBlog } from '../../config/redux/action';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import Axios from 'axios';
-import { FaArrowLeft } from 'react-icons/fa';
 
 const Home = () => {
   const [counter, setCounter] = useState(1);
