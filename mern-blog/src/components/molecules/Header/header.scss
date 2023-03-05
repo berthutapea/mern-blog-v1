@@ -2,21 +2,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background-color: #35322d;
+    background-color: #333;
+    height: 64px;
+    padding: 0 16px;
 
     .logo-app {
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-        margin: 0px;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        cursor: pointer;
     }
 
     .menu-item {
         font-size: 18px;
-        color: white;
-        text-decoration: underline;
+        padding: 12px 6px;
         cursor: pointer;
-        margin: 0px;
+        transition: all 0.3s ease-in-out;
+        color: #f4f4f4;
+
+        &:hover {
+            color: #007bff;
+        }
     }
+
 }
