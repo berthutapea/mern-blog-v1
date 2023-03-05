@@ -3,11 +3,12 @@
 
     .content-wrapper {
         display: flex;
-        // flex-wrap: wrap;
-        justify-content: space-between;
-        // flex-basis: 23%;
-        // padding: 16px;
-        // margin-right: 16px;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 10px;
+        gap: 10px 20px; /* row-gap column gap */
+        row-gap: 10px;
+        column-gap: 20px
     }
 
     .pagination {
@@ -19,7 +20,7 @@
 
     .text-page {
         font-size: 30px;
-        width: 300px;
+        width: 350px;
         text-align: center;
         font-weight: bold;
         margin: 0px;
