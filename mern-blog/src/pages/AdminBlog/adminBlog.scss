@@ -1,45 +1,29 @@
-.Admin-page-wrapper {
-    width: 100%;
-    .content-admin-wrapper {
-        text-transform: uppercase;
-        font-weight: bold;
-        color:#000000;
+.home-page-wrapper {
+    padding-top: 40px;
+
+    .content-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 10px;
+        gap: 10px 20px;
+        /* row-gap column gap */
+        row-gap: 10px;
+        column-gap: 20px
+    }
+
+    .pagination {
+        width: 400px;
+        height: 40px;
+        display: flex;
+        margin: auto;
+    }
+
+    .text-page {
+        font-size: 30px;
+        width: 350px;
         text-align: center;
-    }
-    thead {
-        border-top: 2px solid #000000;
-        border-bottom: 2px solid #000000;
-        th {
-            text-transform: uppercase;
-            text-align: center;
-            padding: 10px;
-            color: #000000;
-            border: 1px solid #F1F1F1;
-        }
-    }
-    tbody {
-        tr {
-            border-bottom: 1px solid #F1F1F1;
-            color: #000000;
-            td {
-                padding: 10px;
-                border: 1px solid #F1F1F1;
-            }
-            th {
-                padding-left: 10px;
-                border: 1px solid #F1F1F1;
-            }
-        }
-    }
-    tfoot {
-        color: #000000;
-        font-style: italic;
-        border-bottom: 2px solid #000000;
-        tr {
-            td {
-                padding: 10px;
-                border: 1px solid #F1F1F1;
-            }
-        }
+        font-weight: bold;
+        margin: 0px;
     }
 }

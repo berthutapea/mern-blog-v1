@@ -60,7 +60,7 @@ const AdminBlog = () => {
                 <Button title="create blog" onClick={() => navigate('/create-blog')} />
             </div>
             <Gap height={20} />
-            <div className="content-wrapper">
+            <div className="">
                 {dataBlog.map(blog => {
                     return <BlogAdmin
                         key={blog._id}
