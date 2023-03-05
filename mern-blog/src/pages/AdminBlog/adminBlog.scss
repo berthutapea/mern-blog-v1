@@ -1,28 +1,27 @@
-.home-page-wrapper {
+.admin-page-wrapper {
     padding-top: 40px;
 
-    .content-wrapper {
-        display: flex;
-        align-items: stretch;
-        justify-content: flex-start;
-        gap: 10px;
-        gap: 10px 20px;
-        /* row-gap column gap */
-        row-gap: 10px;
-        column-gap: 20px
-    }
+    // .admin-content-wrapper {
+    //     display: flex;
+    //     align-items: stretch;
+    //     justify-content: flex-start;
+    //     gap: 10px;
+    //     gap: 10px 20px;
+    //     row-gap: 10px;
+    //     column-gap: 20px
+    // }
 
-    .pagination {
+    .admin-pagination {
         width: 400px;
         height: 40px;
         display: flex;
         margin: auto;
     }
 
-    .text-page {
-        font-size: 30px;
-        width: 350px;
-        text-align: center;
+    .admin-text-page {
+        font-size: 15px;
+        width: 1000px;
+        text-align: left;
         font-weight: bold;
         margin: 0px;
     }

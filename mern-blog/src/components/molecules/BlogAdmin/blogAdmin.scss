@@ -10,58 +10,83 @@ body {
 .table-latitude {
     width: 100%;
 
-    caption {
-        text-transform: uppercase;
-        font-weight: bold;
-        color: $lfs-yellow;
-        text-align: center;
-    }
-
     thead {
         border-top: 2px solid $lfs-yellow;
         border-bottom: 2px solid $lfs-yellow;
 
         th {
-            text-transform: uppercase;
             text-align: center;
             padding: 10px;
-            color: $lfs-blue;
-            border: 1px solid #F1F1F1;
+            color: #000000;
+            border: 1px solid #000000;
         }
     }
 
     tbody {
         tr {
-            border-bottom: 1px solid #F1F1F1;
-            color: $lfs-grey;
+            border-bottom: 1px solid #000000;
+            color: #000000;
 
             td {
                 padding: 10px;
-                border: 1px solid #F1F1F1;
+                border: 1px solid #000000;
             }
 
             th {
-                padding-left: 10px;
-                border: 1px solid #F1F1F1;
+                padding-left: 15px;
+                border: 1px solid #000000;
 
             }
+            .admin-text-title {
+                font-size: 15px;
+                width: 1000px;
+                text-align: left;
+                // font-weight: bold;
+                margin: 0px;
+            }
+
             .admin-img {
                 width: 100px;
                 height: 100px;
+                object-fit: cover;
+            }
+
+            .edit {
+                font-size: 18px;
+                color: #03A9F4;
+                cursor: pointer;
+                margin: 0px;
+                margin-left: 15px;
+
+                &:hover {
+                    color: #0011ff;
+                }
+            }
+
+            .delete {
+                font-size: 16px;
+                margin: 0px;
+                margin-left: 15px;
+                color: #c4295d;
+                cursor: pointer;
+
+                &:hover {
+                    color: #ff0000;
+                }
             }
         }
     }
 
-    tfoot {
-        color: $lfs-yellow;
-        font-style: italic;
-        border-bottom: 2px solid $lfs-yellow;
+    // tfoot {
+    //     color: $lfs-yellow;
+    //     // font-style: italic;
+    //     border-bottom: 2px solid $lfs-yellow;
 
-        tr {
-            td {
-                padding: 10px;
-                border: 1px solid #F1F1F1;
-            }
-        }
-    }
+    //     tr {
+    //         td {
+    //             padding: 10px;
+    //             border: 1px solid #ff0000;
+    //         }
+    //     }
+    // }
 }

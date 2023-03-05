@@ -55,8 +55,8 @@ const AdminBlog = () => {
     }
 
     return (
-        <div className="home-page-wrapper">
-            <div className="create-wrapper">
+        <div className="admin-page-wrapper">
+            <div className="admin-create-wrapper">
                 <Button title="create blog" onClick={() => navigate('/create-blog')} />
             </div>
             <Gap height={20} />
@@ -71,10 +71,10 @@ const AdminBlog = () => {
                     />
                 })}
             </div>
-            <div className="pagination">
+            <div className="admin-pagination">
                 <Button title="Previous" onClick={previous} />
                 <Gap width={20} />
-                <p className="text-page">{page.currentPage} / {page.totalPage}</p>
+                <p className="admin-text-page">{page.currentPage} / {page.totalPage}</p>
                 <Gap width={20} />
                 <Button title="Next" onClick={next} />
             </div>

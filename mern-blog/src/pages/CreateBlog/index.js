@@ -59,11 +59,6 @@ const CreateBlog = () => {
                 <Button title={isUpdate ? 'Update' : 'Save'} onClick={onSubmit} />
             </div>
             <Gap height={20} />
-            <div className="admin-wraper">
-                <p className="admin-title">Title</p>
-                <img className="admin-image" src="" alt="Image" />
-                <p className="admin-action">Action</p>
-            </div>
         </div>
     )
 }
