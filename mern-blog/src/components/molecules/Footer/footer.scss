@@ -10,10 +10,12 @@
         width: 150px;
         height: 150px;
         object-fit: contain;
+        cursor: pointer;
     }
 
     .social-wrapper {
         display: flex;
+        cursor: pointer;
 
         .icon-wrapper {
             padding: 10px;
@@ -26,6 +28,7 @@
                 object-fit: contain;
             }
         }
+
     }
 
 }

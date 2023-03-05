@@ -7,6 +7,8 @@
     padding: 0 16px;
 
     .logo-app {
+        display: flex;
+        align-items: center;
         width: 100px;
         height: 100px;
         object-fit: cover;
@@ -14,8 +16,11 @@
     }
 
     .menu-item {
+        display: flex;
+        align-items: center;
         font-size: 18px;
-        padding: 12px 6px;
+        justify-content: right;
+        padding: 0px 100px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         color: #f4f4f4;

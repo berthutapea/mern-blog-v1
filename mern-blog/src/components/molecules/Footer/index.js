@@ -1,6 +1,7 @@
 import React from 'react';
 import { ICDiscord, ICFacebook, ICGithub, ICInstagram, ICTelegram, ICTwitter, LogoMsn } from '../../../assets';
 import './footer.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Icon = ({ img }) => {
     return (
@@ -11,11 +12,12 @@ const Icon = ({ img }) => {
 }
 
 const Footer = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <div className="footer">
                 <div>
-                    <img className="logo" src={LogoMsn} alt="logo" />
+                    <img className="logo" onClick={() => navigate('/')} src={LogoMsn} alt="logo" />
                 </div>
                 <div className="social-wrapper">
                     <Icon img={ICFacebook} />
