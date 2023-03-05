@@ -5,7 +5,6 @@ import { Button, Gap, Input, TextArea, Upload, Link } from '../../components';
 import { postToApi, setForm, setImgPreview, updateToApi } from '../../config/redux/action';
 import './createBlog.scss';
 import Axios from 'axios';
-import { FaArrowLeft } from 'react-icons/fa';
 
 const CreateBlog = () => {
     const { id } = useParams();
@@ -62,7 +61,7 @@ const CreateBlog = () => {
             <Gap height={20} />
             <div className="admin-wraper">
                 <p className="admin-title">Title</p>
-                <p className="admin-image">Image</p>
+                <img className="admin-image" src="" alt="Image" />
                 <p className="admin-action">Action</p>
             </div>
         </div>
