@@ -16,6 +16,7 @@ const Home = () => {
     dispatch(setDataBlog(counter))
   }, [counter, dispatch])
 
+
   const previous = () => {
     setCounter(counter <= 1 ? 1 : counter - 1)
   }

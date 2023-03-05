@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { BlogItem, Button, Gap } from '../../components';
+import { BlogAdmin, Button, Gap } from '../../components';
 import './adminBlog.scss';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDataBlog } from '../../config/redux/action';
 import { confirmAlert } from 'react-confirm-alert';
@@ -15,6 +16,9 @@ const AdminBlog = () => {
     useEffect(() => {
         dispatch(setDataBlog(counter))
     }, [counter, dispatch])
+
+    const navigate = useNavigate();
+
 
     const previous = () => {
         setCounter(counter <= 1 ? 1 : counter - 1)
@@ -52,13 +56,19 @@ const AdminBlog = () => {
 
     return (
         <div className="home-page-wrapper">
+            <div className="create-wrapper">
+                <Button title="create blog" onClick={() => navigate('/create-blog')} />
+            </div>
             <Gap height={20} />
             <div className="content-wrapper">
                 {dataBlog.map(blog => {
-                    return <BlogItem
+                    return <BlogAdmin
                         key={blog._id}
                         image={`http://localhost:4000/${blog.image}`}
                         title={blog.title}
+                        // body={blog.body}
+                        // name={blog.author.name}
+                        // date={blog.createdAt}
                         _id={blog._id}
                         onDelete={confirmDelete}
                     />
