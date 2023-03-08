@@ -33,7 +33,7 @@ const DetailBlog = () => {
             </div>
         )
     }
-    // return <p>Loading data...</p>
+    return <p>Loading data...</p>
 }
 
 export default DetailBlog;
