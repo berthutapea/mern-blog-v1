@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { BlogItem, Button, Gap } from '../../components';
+import { BlogItem, Button, Gap, SearchBlog } from '../../components';
 import './home.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDataBlog } from '../../config/redux/action';
+// import SearchBlog from '../../components/molecules/SearchBlog';
 // import { confirmAlert } from 'react-confirm-alert';
 // import 'react-confirm-alert/src/react-confirm-alert.css';
 // import Axios from 'axios';
@@ -53,6 +54,9 @@ const Home = () => {
 
   return (
     <div className="home-page-wrapper">
+      <div>
+        <SearchBlog />
+      </div>
       <Gap height={20} />
       <div className="content-wrapper">
         {dataBlog.map(blog => {
@@ -64,7 +68,7 @@ const Home = () => {
             name={blog.author.name}
             date={blog.createdAt}
             _id={blog._id}
-            // onDelete={confirmDelete}
+          // onDelete={confirmDelete}
           />
         })}
       </div>
