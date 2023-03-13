@@ -10,7 +10,7 @@ function SearchBlog() {
     const term = event.target.value.toLowerCase();
     setSearchTerm(term);
     try {
-      const response = await axios.get(`http://localhost:4000/v1/blog/post?search=${term}`);
+      const response = await axios.get(`http://localhost:4000/v1/blog/posts?search=${term}`);
       const results = response.data;
       setSearchResults(results);
     } catch (error) {
@@ -21,8 +21,8 @@ function SearchBlog() {
   return (
     <div>
       <input type="text" value={searchTerm} onChange={handleSearch} />
-      {searchResults.map((blog, index) => (
-        <div key={index}>
+      {Array.isArray(searchResults) && searchResults.length > 0 && searchResults.map((blog) => (
+        <div key={blog}>
           <p>{blog.title}</p>
           <p>{blog.content}</p>
         </div>

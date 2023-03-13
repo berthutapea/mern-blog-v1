@@ -26,32 +26,6 @@ const Home = () => {
     setCounter(counter === page.totalPage ? page.totalPage : counter + 1)
   }
 
-  // const confirmDelete = (id) => {
-  //   confirmAlert({
-  //     title: 'Confirm to delete',
-  //     message: 'Apakah Anda Yakin Akan Menghapus Blog Ini?',
-  //     buttons: [
-  //       {
-  //         label: 'Ya',
-  //         onClick: () => {
-  //           Axios.delete(`http://localhost:4000/v1/blog/post/${id}`)
-  //             .then(res => {
-  //               console.log('success delete: ', res.data);
-  //               dispatch(setDataBlog(counter))
-  //             })
-  //             .catch(err => {
-  //               console.log('err: ', err);
-  //             })
-  //         }
-  //       },
-  //       {
-  //         label: 'Tidak',
-  //         onClick: () => console.log('user tidak setuju')
-  //       }
-  //     ]
-  //   });
-  // }
-
   return (
     <div className="home-page-wrapper">
       <div>
@@ -68,7 +42,6 @@ const Home = () => {
             name={blog.author.name}
             date={blog.createdAt}
             _id={blog._id}
-          // onDelete={confirmDelete}
           />
         })}
       </div>
