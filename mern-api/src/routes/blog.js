@@ -27,5 +27,7 @@ router.put('/post/:postId', [
     blogController.updateBlogPost);
 
 router.delete('/post/:postId', blogController.deleteBlogPost);
+// router.get('/post/search', blogController.searchBlogPost);
+
 
 module.exports = router;

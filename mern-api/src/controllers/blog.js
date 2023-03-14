@@ -163,6 +163,21 @@ exports.deleteBlogPost = (req, res, next) => {
         })
 }
 
+// exports.searchBlogPost = (req, res, next) => {
+//     const searchText = req.query.q; // Ambil nilai query string 'q'
+
+//     BlogPost.find({ $text: { $search: searchText } })
+//         .then((results) => {
+//             res.status(200).json({
+//                 message: `Hasil pencarian untuk "${searchText}"`,
+//                 data: results,
+//             });
+//         })
+//         .catch((err) => {
+//             next(err);
+//         });
+// };
+
 const removeImage = (filePath) => {
     console.log('filePath', filePath);
     console.log('dir name: ', __dirname);
